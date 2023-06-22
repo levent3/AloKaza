@@ -1,0 +1,24 @@
+﻿@model EntitiesLayer.User
+
+<h1>Create User</h1>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label asp-for="Age">Yaş:</label>
+        <input asp-for="Age" />
+        <span asp-validation-for="Age"></span>
+    </div>
+    <div>
+        <label asp-for="TcNo">Yaş:</label>
+        <input asp-for="TcNo" />
+        <span asp-validation-for="TcNo"></span>
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+</form>

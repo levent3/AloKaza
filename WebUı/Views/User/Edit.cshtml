@@ -1,0 +1,44 @@
+﻿@model EntitiesLayer.User
+<div class="card">
+    <div class="card-header">
+        <h3>@Model.Name @Model.Age</h3>
+        <div class="card-header">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" asp-controller="User" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id">
+            <div class="input-group mb-3">
+                <input type="Name" asp-for="Name" class="form-control" placeholder="Name">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Name"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="Age" asp-for="Age" class="form-control" placeholder="Age">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Age"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="TcNo" asp-for="TcNo" class="form-control" placeholder="TcNo">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="TcNo"></span>
+                    </div>
+                </div>
+            </div>
+           
+
+         
+            <button type="submit" class="btn btn-primary" value="Kaydet">Kaydet</button>
+        </form>
+    </div>
+</div>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
